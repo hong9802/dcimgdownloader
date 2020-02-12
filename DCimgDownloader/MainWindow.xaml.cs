@@ -22,9 +22,9 @@ namespace DCimgDownloader
             string tmpText;
             string imgurl;
             url = input_url.Text;
-            responseText = requestHandler.gallRequest(url);
             try
             {
+                responseText = requestHandler.gallRequest(url);
                 for (int i = 0; i < IMGMAX; i++)
                 {
                     if (responseText.IndexOf("writing_view_box") != -1)
@@ -47,9 +47,11 @@ namespace DCimgDownloader
                 }
             }
             catch (System.ArgumentException) { }
+            catch (System.UriFormatException) { result.Text = "URI ERROR"; }
             finally
             {
-                result.Text = "finish";
+                if(result.Text.IndexOf("ERROR") == -1)
+                    result.Text = "finish";
             }
         }
 
