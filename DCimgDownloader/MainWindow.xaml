@@ -1,0 +1,16 @@
+﻿<Window x:Class="DCimgDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DCimgDownloader"
+        mc:Ignorable="d"
+        Title="DCimg Downloader" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="input_url" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="692" TextChanged="Url_TextChanged"/>
+        <Button x:Name="search" Content="다운로드" HorizontalAlignment="Left" Margin="707,10,0,0" VerticalAlignment="Top" Width="75" Height="60" Click="Search_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="위쪽 박스에, 게시글 링크 입력 후 다운로드 버튼 클릭!" VerticalAlignment="Top" Width="772" Height="40"/>
+        <TextBlock x:Name="result" HorizontalAlignment="Left" Margin="10,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" Height="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="676,393,0,-6" TextWrapping="Wrap" Text="Made by hong9802" VerticalAlignment="Top" Width="110"/>
+    </Grid>
+</Window>
